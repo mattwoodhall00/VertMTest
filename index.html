@@ -18,18 +18,21 @@
     <title>Vertu Motors</title>
   </head>
   <body>
+     <!-- top nav section-->
     <div class="navbar">
+      <!--nav logo-->
       <div class="logo-img-section">
         <img class="nav-logo" src="./images/vertumotorslogo1.png" alt="Logo" />
       </div>
+      <!-- nav dropdown menus-->
       <nav aria-label="Main Navigation">
         <ul>
           <li class="menu-item">
             <a href="#" aria-haspopup="true" aria-expanded="false">New cars</a>
             <ul class="submenu">
-              <li><a href="#">Submenu 1-1</a></li>
-              <li><a href="#">Submenu 1-2</a></li>
-              <li><a href="#">Submenu 1-3</a></li>
+              <li><a href="#">BMW</a></li>
+              <li><a href="#">Audi</a></li>
+              <li><a href="#">Seat</a></li>
             </ul>
             <span class="material-symbols-outlined"> expand_more </span>
           </li>
@@ -37,9 +40,9 @@
           <li class="menu-item">
             <a href="#" aria-haspopup="true" aria-expanded="false">Used Cars</a>
             <ul class="submenu">
-              <li><a href="#">Submenu 2-1</a></li>
-              <li><a href="#">Submenu 2-2</a></li>
-              <li><a href="#">Submenu 2-3</a></li>
+              <li><a href="#">Volvo</a></li>
+              <li><a href="#">Mercedes</a></li>
+              <li><a href="#">Volkswagen</a></li>
             </ul>
             <span class="material-symbols-outlined"> expand_more </span>
           </li>
@@ -47,9 +50,9 @@
           <li class="menu-item">
             <a href="#" aria-haspopup="true" aria-expanded="false">Servicing</a>
             <ul class="submenu">
-              <li><a href="#">Submenu 3-1</a></li>
-              <li><a href="#">Submenu 3-2</a></li>
-              <li><a href="#">Submenu 3-3</a></li>
+              <li><a href="#">Servicing plan 1</a></li>
+              <li><a href="#">Servicing plan 2</a></li>
+              <li><a href="#">Servicing plan 3</a></li>
             </ul>
             <span class="material-symbols-outlined"> expand_more </span>
           </li>
@@ -59,15 +62,16 @@
               >Commercials</a
             >
             <ul class="submenu">
-              <li><a href="#">Submenu 4-1</a></li>
-              <li><a href="#">Submenu 4-2</a></li>
-              <li><a href="#">Submenu 4-3</a></li>
+              <li><a href="#">Commercials 1</a></li>
+              <li><a href="#">Commercials 2</a></li>
+              <li><a href="#">Commercials 3</a></li>
             </ul>
             <span class="material-symbols-outlined"> expand_more </span>
           </li>
           <li class="menu-item"><a href="#">Motability</a></li>
         </ul>
       </nav>
+       <!-- nav search bar-->
       <div class="search-bar">
         <span class="material-symbols-outlined search-icon">
           search
@@ -75,12 +79,13 @@
         <input
           type="text"
           id="search-bar-input"
-          placeholder='Search:"Make,model or location"'
+          placeholder='Search:"Make, model or location"'
         />
         <span class="material-symbols-outlined mic-icon">
           mic
           </span>
       </div>
+       <!-- nav find us, save and login icons-->
       <div class="customer-nav-options">
         <div class="location-option">
           <span class="material-symbols-outlined location-icon">
@@ -108,6 +113,7 @@
         </div>
       </div>      
     </div>
+
     <div class="hero-container">
       <div class="hero-img"></div>
       <div class="hero-info-container">
@@ -116,6 +122,7 @@
         <button class="test-drive-btn">Book a test drive</button>
       </div>
     </div>
+     <!--car cards-->
     <div class="card-section">
       <h1>BMW i4 trims</h1>
       <div class="cards-container">
@@ -147,6 +154,13 @@
           </ul>
         </div>
         <div class="card">
+          <div class="card-chevron">
+            <div class="circle">
+              <span class="material-symbols-outlined chevron-right">
+                chevron_right
+                </span>
+            </div>
+          </div>
           <img class="card-image" src="./images/Trim-03.jpg" alt="grey car" />
           <h2 class="card-title">Sport</h2>
           <h3 class="card-subtitle">From £53,480</h3>
@@ -160,6 +174,44 @@
           </ul>
         </div>
       </div>
+    </div>
+     <!-- bottom feature section with the grey box background-->
+    <div class ="top-feature-section">
+      <div class="top-feature-container">
+        <div class="top-feature-section-text">
+          <h1>Explore the new BMW </br> interior</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque, dui sagittis gravida hendrerit, ligula ante porta nibh, ut pulvinar erat ipsum sit amet est. 
+            Nullam convallis, leo sodales molestie maximus, arcu magna fermentum massa, ac tempor ligula ex quis dolor. Mauris at laoreet purus.</p>
+          <button class="personalised-video-btn">Request a Personalised Video</button>
+      </div>
+      <div class="top-feature-section-image-div">
+        <img class="top-feature-section-image"src="./images/Feature-01.jpg" alt="">
+      </div>
+      </div>
+    </div>
+    <!-- bottom feature section with the black box background-->
+    <div class ="bottom-feature-section">
+    <div class ="bottom-feature-container">
+      <div class="bottom-feature-section-image-div" >
+        <img class="bottom-feature-section-image"src="./images/Feature-02.jpg" alt="">
+      </div>
+        <div class="bottom-feature-section-text">
+          <h1>Explore the new BMW </br> interior</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non sodales augue.
+             Mauris convallis nulla et faucibus faucibus. Fusce non elementum justo, non posuere turpis.</p>
+             <div class="car-info-milage">
+              <div>
+                <h1 class="eletric-range-title">02:05 hr</h1>
+                <p>Charging at home for a </br> range of 62 miles</p>
+              </div>
+              <div>
+                <h1 class="eletric-range-title eletric-range-text">365</h1>
+                <p class="eletric-range-text">Electic range in miles</p>
+              </div>
+             </div>
+             <button class="test-drive-btn">Book a test drive</button>
+      </div>
+    </div>
     </div>
   </body>
 </html>

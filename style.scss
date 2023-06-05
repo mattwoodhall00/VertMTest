@@ -6,8 +6,9 @@ $btn-background-color: #00e2c9;
 $border-radius-10: 10px;
 
 * {
-  border: 1px dashed rgb(255, 0, 0);
+  //border: 1px dashed rgb(255, 0, 0);
   font-family: "DM Sans", sans-serif;
+  margin: 0px;
   .navbar {
     max-width: 1400px;
     margin: auto;
@@ -26,6 +27,7 @@ $border-radius-10: 10px;
     .nav-logo {
       width: 100%;
       height: 100%;
+      cursor: pointer;
     }
 
     nav ul {
@@ -44,6 +46,7 @@ $border-radius-10: 10px;
           &:hover {
             .submenu {
               display: block;
+              z-index: 2;
             }
           }
 
@@ -107,8 +110,9 @@ $border-radius-10: 10px;
         width: 100%; /* Width */
         font-family: inherit;
       }
-      .save-icon .mic-icon {
+      .search-icon,.mic-icon {
         color: #333;
+        cursor: pointer;
       }
     }
 
@@ -128,13 +132,14 @@ $border-radius-10: 10px;
           display: flex;
           align-items: center;
           color: $primary-color;
-
+        }
           .location-icon,
           .save-icon,
           .login-icon {
             margin-right: 5px;
+            cursor: pointer;
           }
-        }
+        
       }
     }
   }
@@ -172,6 +177,7 @@ $border-radius-10: 10px;
         font-size: 16px;
         line-break: auto;
         letter-spacing: 0.5px;
+        margin: 10px 0px;
       }
 
       .test-drive-btn {
@@ -183,6 +189,8 @@ $border-radius-10: 10px;
         font-weight: 700;
         outline: none;
         border: 0px;
+        margin: 10px 0px;
+        cursor: pointer;
       }
     }
   }
@@ -191,8 +199,8 @@ $border-radius-10: 10px;
     margin: auto;
     margin-top: 50px;
 
-    >h1{
-        margin: 20px;
+    > h1 {
+      margin: 20px;
     }
 
     .cards-container {
@@ -201,11 +209,12 @@ $border-radius-10: 10px;
       width: 100%;
       background-color: $secondary-color;
       border-radius: $pixel-10;
+      position: relative;
 
       .card {
         width: 500px; /* Adjust the card width as needed */
         background-color: $secondary-color; /* Adjust the background color as needed */
-       padding: 30px;
+        padding: 30px;
         margin-bottom: calc($pixel-10 * 2);
         border-radius: 15px;
         margin: 0px 20px;
@@ -215,27 +224,53 @@ $border-radius-10: 10px;
         box-sizing: border-box;
         height: auto;
 
+        .card-chevron {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            .circle {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color:  rgba(red($secondary-color), green($secondary-color), blue($secondary-color), 0.5);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              border: 1px solid #ebebeb;
+
+              .chevron-right{
+                font-size: 28px;
+                font-weight: 600;
+                color: #333;
+                cursor: pointer;
+              }
+            }
+          }
+
         .card-image {
           width: 100%; /* Adjust the image size as needed */
           height: auto; /* Adjust the image height as needed */
           margin-bottom: 10px;
-        
-
         }
 
         .card-title {
           font-size: 20px;
           font-weight: bold;
           margin-bottom: 3px;
-          
         }
 
         .card-subtitle {
           font-size: 16px;
           color: #222222;
           margin-bottom: 12px;
-          
-
         }
 
         .card-bullet-points {
@@ -256,6 +291,164 @@ $border-radius-10: 10px;
               color: #000;
             }
           }
+        }
+      }
+    }
+  }
+
+  .top-feature-section {
+    max-width: 1650px;
+    position: relative;
+    margin: auto;
+    margin-top: 60px;
+    width: 100%;
+    padding: 10px;
+    height: 50vh;
+    background-color: #ededed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .top-feature-container {
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 90%;
+      padding: 40px;
+      align-items: center;
+      justify-content: center;
+
+      .top-feature-section-text {
+        padding: 20px;
+        width: 45%;
+        > h1 {
+          width: 75%;
+          font-size: 38px;
+          color: #222222;
+        }
+
+        > p {
+          width: 90%;
+          font-weight: lighter;
+          font-size: 16px;
+          line-break: auto;
+          color: #222222;
+          margin: 10px 0px;
+        }
+
+        .personalised-video-btn {
+          height: 50px;
+          padding: 0px 30px;
+          background-color: $btn-background-color;
+          color: #013a3c;
+          border-radius: 10px;
+          font-weight: 700;
+          outline: none;
+          border: 0px;
+          margin: 10px 0px;
+          cursor: pointer;
+        }
+      }
+      .top-feature-section-image-div {
+        width: 700px;
+        height: auto;
+
+        .top-feature-section-image {
+          width: 100%;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+  .bottom-feature-section {
+    max-width: 1650px;
+    position: relative;
+    margin: auto;
+    margin-top: 0;
+    width: 100%;
+    padding: 10px;
+    height: 55vh;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bottom-feature-container {
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 90%;
+      padding: 40px;
+      align-items: center;
+      justify-content: center;
+
+      .bottom-feature-section-text {
+        padding: 30px;
+        width: 45%;
+        margin: 0px 20px;
+        > h1 {
+          width: 75%;
+          font-size: 38px;
+          color: $secondary-color;
+        }
+
+        > p {
+          width: 90%;
+          font-weight: lighter;
+          font-size: 14px;
+          line-break: auto;
+          color: $secondary-color;
+          margin: 10px 0px;
+        }
+
+        .car-info-milage {
+          display: flex;
+          justify-content: start;
+          margin: 10px 0px;
+
+          > div > h1 {
+            color: $secondary-color;
+            margin: 10px 0px;
+            font-size: 28px;
+          }
+
+          > div > p {
+            color: $secondary-color;
+            font-weight: lighter;
+            font-size: 14px;
+            line-break: auto;
+            
+          }
+          > div > .eletric-range-title{
+            font-size: 40px;
+          }
+          > div > .eletric-range-text{
+            margin: 10px 20px;
+          }
+        }
+
+        .test-drive-btn {
+          height: 50px;
+          padding: 0px 30px;
+          background-color: $btn-background-color;
+          color: #013a3c;
+          border-radius: 10px;
+          font-weight: 700;
+          outline: none;
+          border: 0px;
+          margin: 30px 0px;
+          cursor: pointer;
+        }
+      }
+      .bottom-feature-section-image-div {
+        width: 700px;
+        height: auto;
+
+        .bottom-feature-section-image {
+          width: 100%;
+          border-radius: 15px;
         }
       }
     }
