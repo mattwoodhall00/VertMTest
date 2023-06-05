@@ -212,8 +212,8 @@ $border-radius-10: 10px;
       position: relative;
 
       .card {
-        width: 500px; /* Adjust the card width as needed */
-        background-color: $secondary-color; /* Adjust the background color as needed */
+        width: 500px; 
+        background-color: $secondary-color; 
         padding: 30px;
         margin-bottom: calc($pixel-10 * 2);
         border-radius: 15px;
@@ -256,8 +256,8 @@ $border-radius-10: 10px;
           }
 
         .card-image {
-          width: 100%; /* Adjust the image size as needed */
-          height: auto; /* Adjust the image height as needed */
+          width: 100%; 
+          height: auto; 
           margin-bottom: 10px;
         }
 
