@@ -18,12 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
  
   //feature to change the button text from "Personalised video" to "book a test drive" as per the designs
-  const topFeatureBtn = document.querySelector(".personalised-video-btn");
-  if(checkBreakpoint() == "mobile"){
-    topFeatureBtn.innerHTML = "Book a test drive";
-  }else{
-    topFeatureBtn.innerHTML = "Request a Personalised Video";
+  function changeTopFeatureBtnText(){
+    const topFeatureBtn = document.querySelector(".personalised-video-btn");
+    if(checkBreakpoint() == "mobile"){
+      topFeatureBtn.innerHTML = "Book a test drive";
+    }else{
+      topFeatureBtn.innerHTML = "Request a Personalised Video";
+    }
   }
+ 
   
   function checkBreakpoint() {
     const windowWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -35,4 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return "desktop"
     }
   }
+
+  // Attach the event listener to the 'resize' event of the window to call the btn text change function "changeTopFeatureBtnText"
+window.addEventListener('resize', changeTopFeatureBtnText);
+
 });
